@@ -54,7 +54,7 @@ router.put(
       throw new expressError(400, "Invalid data");
     }
     let { id } = req.params;
-    await List.findByIdAndUpdate(id, { ...req.body.listing });
+    await List.findByIdAndUpdate(id, { ...req.body.list });
     res.redirect(`/listings/${id}`);
   })
 );
